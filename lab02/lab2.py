@@ -234,17 +234,17 @@ class UI:
         
     def printMainMenu(self):
         s = ''
-        s += "[-1,-1,-1,-1] is the default configuration \n"
+        s += "[0,0,0,0] if you don't have any imagination \n"
         s += "0 - exit \n"
-        s += "1 - read the size of the board \n"
-        s += "2 - find a path with DFS \n"
-        s += "3 - find a path with Greedy \n"
+        s += "1 - read number of queens \n"
+        s += "2 - find solution with DFS \n"
+        s += "3 - find solution with Greedy \n"
         print(s)
         
     def readConfigSubmenu(self):
         n = 4
         try:
-            print("Input the size of the board (implicit n=4)")
+            print("Input number of queens (implicit n=4)")
             n = int(input("n = "))
         except:
             print("Invalid number, the implicit value is still 4")
@@ -265,10 +265,10 @@ class UI:
         
     def run(self):
         runM = True
-        s = State()
-        c = Configuration([1,3,0,2])
-        p = Problem(c)
-        s += c
+        #s = State()
+        #c = Configuration([1,3,0,2])
+        #p = Problem(c)
+        #s += c
         #print(c.getSize())
         #print(p.heuristics(s))
         #for x in p.expand(s):
